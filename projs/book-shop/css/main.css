@@ -1,0 +1,62 @@
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    width: 277px;
+    ;
+    margin: 20px;
+}
+
+.card-img-top {
+    height: 180px;
+}
+
+.btn-delete {
+    position: absolute;
+    top: 0;
+    color: white;
+    border: 1px solid white;
+    min-width: 25px;
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.action-container button {
+    font-size: 14px;
+}
+
+.card-body {
+    padding: 0.8rem;
+}
+
+.card-body h5 {
+    /* border: 1px solid black; */
+    min-height: 60px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.card-body h6 {
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    max-height: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+.ratingContainer {
+    display: flex;
+    direction: row;
+    width: 40%;
+}

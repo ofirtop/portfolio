@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  color:white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+}
+.button{
+  border:3px solid yellow;
+  background-color: blanchedalmond;
+  display:inline-block;
+  color:black;
+}
+.hidden{
+  display:none;
+}

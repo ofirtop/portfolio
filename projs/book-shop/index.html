@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Books Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Book Shop</h1>
+    </header>
+    <main>
+        <button type="button" class="btn btn-link" onclick="onAddBook()">Create New Book</button>
+        <section class="books-container">
+        </section>
+
+        <!--    Read Book Info  -->
+        <div class="modal read" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Book Details</h5>
+                        <button onclick="onCloseModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="modal-read-img" src="">
+                        <p class="modal-body-author"></p>
+                        <p class="modal-body-price"></p>
+                        <!--    INPUT RATING    -->
+                        <div>Rating</div>
+                        <div class="ratingContainer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="onRatingChange('-')">-</button>
+                            
+                            <div class="input-group mb-3">
+                                <!-- <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Rating: </span>
+                                </div> -->
+                                <input type="text" class="form-control rating-input" value="" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onRatingChange('+')">+</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onRatingChange('+')">+</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="onCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    Update Book Info    -->
+        <div class="modal update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <!-- INPUT TITLE -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Title:</span>
+                            </div>
+                            <input type="text" class="form-control title-input" value="" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <button onclick="onCloseModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div>ID: <span class="bookId"></span></div>
+                        <!--    IMG SRC     -->
+                        <img class="modal-read-img" src="">
+                        <!--    IMG BROWSE & UPLOAD     -->
+                        <div class="input-group mb-3 img-upload-container">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="">Upload</span>
+                            </div>
+                        </div>
+
+                        <!-- INPUT AUTHOR -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Author:</span>
+                            </div>
+                            <input type="text" class="form-control author-input" value="" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <!-- INPUT PRICE -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Price:</span>
+                            </div>
+                            <input type="text" class="form-control price-input" value="" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="onCloseModal()">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="onSaveBook()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <script src="lib/jquery/jquery.js"></script>
+        <script src="lib/bootstrap/bootstrap.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/storage-service.js"></script>
+        <script src="js/books-controller.js"></script>
+        <script src="js/books-service.js"></script>
+    </footer>
+</body>
+
+</html>
