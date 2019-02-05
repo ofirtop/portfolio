@@ -31,10 +31,24 @@
   </div>
   <aside class="offcanvas-aside">
 
-    <!-- Contact -->
-    <section id="contact">
-      <h4>Contact Me</h4>
-    </section>
+
+    <h5>Contact Me</h5>
+    <div>
+      <div class="email-section">eMail</div>
+      <input class="email-section-input" type="email" placeholder="name@example.com">
+    </div>
+    <div class="subject-section">
+      <div>Subject</div>
+      <input class="subject-section-input" type="subject" placeholder="type subject here">
+    </div>
+    <div class="msg-section">
+      <div>Message Body</div>
+      <textarea class="textarea-section-input" style="text-align:left" rows="4" cols="20">type message text here
+        </textarea>
+    </div>
+    
+    <button type="button" onclick="onSubmit()" class="btn btn-primary">Submit</button>
+    
 
   </aside>
 
@@ -227,7 +241,7 @@
                 <p class="item-intro text-muted">short description..</p>
                 <p>Go to project: <a class="modal-link-proj" href=""></a></p>
                 <img class="img-fluid d-block mx-auto" src="" alt="">
-                
+
                 <ul class="list-inline">
                   <li class="modal-proj-date">Date: January 2017</li>
                   <li class="modal-proj-client">Client: Threads</li>
@@ -259,7 +273,7 @@
   <script src="js/main.js"></script>
   <script src="js/util.js"></script>
   <script src="js/project-service.js"></script>
-  
+
 
 
 </body>
